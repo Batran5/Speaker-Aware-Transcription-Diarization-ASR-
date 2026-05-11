@@ -551,47 +551,67 @@ with col5:
 st.markdown('<div class="section-title">Audio Preview</div>', unsafe_allow_html=True)
 st.audio(str(wav_path))
 
-if not run:
-    st.stop()
+# Cache diarization outputs so changing sidebar radios (pipeline mode) or tab widgets
+# (e.g. segment table view) does not wipe results — the Run button is only True on
+# the rerun that immediately follows a click.
+cache_key = (uri, str(Path(wav_path).resolve()))
+diar_cache = st.session_state.setdefault("diar_cache", {})
 
-
-# -------------------------------------------------------------------------
-# Run selected pipelines
-# -------------------------------------------------------------------------
 run_base = choice in ("Both (compare)", "Baseline only")
 run_ft = choice in ("Both (compare)", "Fine-tuned only")
-steps = max(1, sum([run_base, run_ft]))
-done = 0
 results = {}
 
-progress = st.progress(0.0, "Starting inference…")
+if run:
+    entry = diar_cache.setdefault(cache_key, {"results": {}})
+    entry["duration"] = duration
+    steps = max(1, sum([run_base, run_ft]))
+    done = 0
+    progress = st.progress(0.0, "Starting inference…")
 
-if run_base:
-    progress.progress(done / steps, "Loading baseline pipeline…")
-    baseline = load_baseline()
-    progress.progress((done + 0.35) / steps, "Running baseline diarization…")
-    t0 = time.time()
-    ann = baseline(str(wav_path))
-    elapsed = time.time() - t0
-    results["Baseline"] = (ann, ann_to_segments(ann, duration), elapsed)
-    done += 1
+    if run_base:
+        progress.progress(done / steps, "Loading baseline pipeline…")
+        baseline = load_baseline()
+        progress.progress((done + 0.35) / steps, "Running baseline diarization…")
+        t0 = time.time()
+        ann = baseline(str(wav_path))
+        elapsed = time.time() - t0
+        results["Baseline"] = (ann, ann_to_segments(ann, duration), elapsed)
+        entry["results"]["Baseline"] = results["Baseline"]
+        done += 1
 
-if run_ft:
-    progress.progress(done / steps, "Loading fine-tuned pipeline…")
-    fine_tuned = load_finetuned()
-    if fine_tuned is None:
-        progress.empty()
-        st.error(f"Fine-tuned weights not found at `{FT_WEIGHTS}`. Run the training/save section first.")
+    if run_ft:
+        progress.progress(done / steps, "Loading fine-tuned pipeline…")
+        fine_tuned = load_finetuned()
+        if fine_tuned is None:
+            progress.empty()
+            st.error(f"Fine-tuned weights not found at `{FT_WEIGHTS}`. Run the training/save section first.")
+            st.stop()
+        progress.progress((done + 0.35) / steps, "Running fine-tuned diarization…")
+        t0 = time.time()
+        ann = fine_tuned(str(wav_path))
+        elapsed = time.time() - t0
+        results["Fine-tuned"] = (ann, ann_to_segments(ann, duration), elapsed)
+        entry["results"]["Fine-tuned"] = results["Fine-tuned"]
+        done += 1
+
+    progress.progress(1.0, "Done")
+    progress.empty()
+
+elif cache_key in diar_cache:
+    full = diar_cache[cache_key]["results"]
+    if run_base and "Baseline" in full:
+        results["Baseline"] = full["Baseline"]
+    if run_ft and "Fine-tuned" in full:
+        results["Fine-tuned"] = full["Fine-tuned"]
+    if not results:
+        st.warning(
+            "No cached results for this mode on the current file. "
+            "Choose **Both (compare)** or the missing pipeline and click **Run diarization** once."
+        )
         st.stop()
-    progress.progress((done + 0.35) / steps, "Running fine-tuned diarization…")
-    t0 = time.time()
-    ann = fine_tuned(str(wav_path))
-    elapsed = time.time() - t0
-    results["Fine-tuned"] = (ann, ann_to_segments(ann, duration), elapsed)
-    done += 1
-
-progress.progress(1.0, "Done")
-progress.empty()
+else:
+    st.info("Select a VoxConverse file or upload an audio file, then click **Run diarization**.")
+    st.stop()
 
 
 # -------------------------------------------------------------------------
@@ -651,19 +671,41 @@ with tab_metrics:
 
     metrics_df = pd.DataFrame(metric_rows)
 
-    card_cols = st.columns(min(4, len(metrics_df.columns)))
     if not metrics_df.empty:
-        selected_system = st.selectbox("Show metric cards for", metrics_df["system"].tolist(), index=len(metrics_df) - 1)
-        selected_row = metrics_df[metrics_df["system"] == selected_system].iloc[0].to_dict()
-        c1, c2, c3, c4 = st.columns(4)
-        with c1:
-            card("DER", f"{selected_row.get('der_percent', 'N/A')}%", "Lower is better")
-        with c2:
-            card("WER", f"{selected_row.get('speaker_label_wer_percent', 'N/A')}%", "Lower is better")
-        with c3:
-            card("CER", f"{selected_row.get('speaker_label_cer_percent', 'N/A')}%", "Lower is better")
-        with c4:
-            card("RTF", f"{selected_row.get('rtf', 'N/A')}", "Lower is faster")
+        systems_present = set(metrics_df["system"].tolist())
+        has_pair = {"Baseline", "Fine-tuned"}.issubset(systems_present)
+        if has_pair:
+            st.markdown('<div class="section-title">Summary cards</div>', unsafe_allow_html=True)
+            left, right = st.columns(2)
+            for col, sys_name in ((left, "Baseline"), (right, "Fine-tuned")):
+                with col:
+                    st.markdown(f"**{sys_name}**")
+                    row = metrics_df[metrics_df["system"] == sys_name].iloc[0].to_dict()
+                    c1, c2, c3, c4 = st.columns(4)
+                    with c1:
+                        card("DER", f"{row.get('der_percent', 'N/A')}%", "Lower is better")
+                    with c2:
+                        card("WER", f"{row.get('speaker_label_wer_percent', 'N/A')}%", "Lower is better")
+                    with c3:
+                        card("CER", f"{row.get('speaker_label_cer_percent', 'N/A')}%", "Lower is better")
+                    with c4:
+                        card("RTF", f"{row.get('rtf', 'N/A')}", "Lower is faster")
+        else:
+            selected_system = st.selectbox(
+                "Show metric cards for",
+                metrics_df["system"].tolist(),
+                index=len(metrics_df) - 1,
+            )
+            selected_row = metrics_df[metrics_df["system"] == selected_system].iloc[0].to_dict()
+            c1, c2, c3, c4 = st.columns(4)
+            with c1:
+                card("DER", f"{selected_row.get('der_percent', 'N/A')}%", "Lower is better")
+            with c2:
+                card("WER", f"{selected_row.get('speaker_label_wer_percent', 'N/A')}%", "Lower is better")
+            with c3:
+                card("CER", f"{selected_row.get('speaker_label_cer_percent', 'N/A')}%", "Lower is better")
+            with c4:
+                card("RTF", f"{selected_row.get('rtf', 'N/A')}", "Lower is faster")
 
     st.dataframe(metrics_df, use_container_width=True, hide_index=True)
 
@@ -695,11 +737,27 @@ with tab_segments:
 with tab_speakers:
     st.markdown('<div class="section-title">Per-speaker Statistics</div>', unsafe_allow_html=True)
     available = list(results.keys())
-    selected_stats_system = st.selectbox("System", available, index=len(available) - 1)
-    stats_df = per_speaker_stats(display_result_rows[selected_stats_system])
-    st.dataframe(stats_df, use_container_width=True, hide_index=True)
-    if not stats_df.empty:
-        st.pyplot(build_speaker_bar(stats_df, f"{selected_stats_system}: speaking time by speaker"), use_container_width=True)
+    if {"Baseline", "Fine-tuned"}.issubset(set(available)):
+        col_b, col_f = st.columns(2)
+        for col, sys_name in ((col_b, "Baseline"), (col_f, "Fine-tuned")):
+            with col:
+                st.markdown(f"**{sys_name}**")
+                stats_df = per_speaker_stats(display_result_rows[sys_name])
+                st.dataframe(stats_df, use_container_width=True, hide_index=True)
+                if not stats_df.empty:
+                    st.pyplot(
+                        build_speaker_bar(stats_df, f"{sys_name}: speaking time by speaker"),
+                        use_container_width=True,
+                    )
+    else:
+        selected_stats_system = st.selectbox("System", available, index=len(available) - 1)
+        stats_df = per_speaker_stats(display_result_rows[selected_stats_system])
+        st.dataframe(stats_df, use_container_width=True, hide_index=True)
+        if not stats_df.empty:
+            st.pyplot(
+                build_speaker_bar(stats_df, f"{selected_stats_system}: speaking time by speaker"),
+                use_container_width=True,
+            )
 
 with tab_downloads:
     st.markdown('<div class="section-title">Downloads</div>', unsafe_allow_html=True)
