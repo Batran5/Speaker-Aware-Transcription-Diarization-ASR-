@@ -1,0 +1,39 @@
+{
+  "audio_duration_s": 395.88,
+  "diarization_time_s": 26.11,
+  "asr_time_s": 50.82,
+  "total_processing_s": 76.93,
+  "rtf": 0.1943,
+  "num_speakers_pred": 3,
+  "num_utterances": 39,
+  "asr_language": "en",
+  "asr_model": "large-v3",
+  "avg_no_speech_prob": 0.0129,
+  "avg_logprob": -0.1597,
+  "per_speaker": [
+    {
+      "speaker": "SPEAKER_02",
+      "talk_time_s": 293.5,
+      "turns": 19,
+      "words": 935
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "talk_time_s": 92.72,
+      "turns": 18,
+      "words": 305
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "talk_time_s": 4.68,
+      "turns": 2,
+      "words": 15
+    }
+  ],
+  "der": 0.0892,
+  "false_alarm": 0.0081,
+  "missed_detection": 0.076,
+  "confusion": 0.0051,
+  "turn_precision": 0.1316,
+  "turn_recall": 0.1163
+}

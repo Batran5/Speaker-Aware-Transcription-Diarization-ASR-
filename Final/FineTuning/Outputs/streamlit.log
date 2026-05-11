@@ -1,0 +1,1031 @@
+2026-05-11 21:54:52.576 Uvicorn server started on 0.0.0.0:8501
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://172.28.0.12:8501
+  External URL: http://35.204.14.222:8501
+
+/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py:285: UserWarning: Torchaudio's I/O functions now support par-call bakcend dispatch. Importing backend implementation directly is no longer guaranteed to work. Please use `backend` keyword with load/save/info function, instead of calling the udnerlying implementation directly.
+  if hasattr(m, "__path__")
+/usr/local/lib/python3.12/dist-packages/pyannote/audio/utils/reproducibility.py:74: ReproducibilityWarning: TensorFloat-32 (TF32) has been disabled as it might lead to reproducibility issues and lower accuracy.
+It can be re-enabled by calling
+   >>> import torch
+   >>> torch.backends.cuda.matmul.allow_tf32 = True
+   >>> torch.backends.cudnn.allow_tf32 = True
+See https://github.com/pyannote/pyannote-audio/issues/1370 for more details.
+
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1808.)
+  std = sequences.std(dim=-1, correction=1)
+/content/streamlit_app.py:343: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  cmap = plt.cm.get_cmap("tab20", max(len(labels), 1))
+2026-05-11 21:56:31.893 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-05-11 21:56:57.834 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-05-11 21:58:32.294 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-05-11 21:58:32.303 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-05-11 21:58:32.309 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-05-11 21:58:32.374 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py:285: UserWarning: Torchaudio's I/O functions now support par-call bakcend dispatch. Importing backend implementation directly is no longer guaranteed to work. Please use `backend` keyword with load/save/info function, instead of calling the udnerlying implementation directly.
+  if hasattr(m, "__path__")
+/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py:264: UserWarning: Module 'speechbrain.pretrained' was deprecated, redirecting to 'speechbrain.inference'. Please update your script. This is a change from SpeechBrain 1.0. See: https://github.com/speechbrain/speechbrain/releases/tag/v1.0.0
+  lambda m: [m.__file__] if hasattr(m, "__file__") else [],
+2026-05-11 21:59:22.134 Examining the path of speechbrain.k2_integration raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/k2_fsa/__init__.py", line 12, in <module>
+    import k2  # noqa
+    ^^^^^^^^^
+ModuleNotFoundError: No module named 'k2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/k2_fsa/__init__.py", line 16, in <module>
+    raise ImportError(MSG) from e
+ImportError: Please install k2 to use k2
+Checkout: https://k2-fsa.github.io/k2/installation/from_wheels.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 264, in <lambda>
+    lambda m: [m.__file__] if hasattr(m, "__file__") else [],
+                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.k2_fsa, loaded=False) failed
+2026-05-11 21:59:22.149 Examining the path of speechbrain.k2_integration raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/k2_fsa/__init__.py", line 12, in <module>
+    import k2  # noqa
+    ^^^^^^^^^
+ModuleNotFoundError: No module named 'k2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/k2_fsa/__init__.py", line 16, in <module>
+    raise ImportError(MSG) from e
+ImportError: Please install k2 to use k2
+Checkout: https://k2-fsa.github.io/k2/installation/from_wheels.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 285, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.k2_fsa, loaded=False) failed
+2026-05-11 21:59:23.977547: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py:264: UserWarning: Module 'speechbrain.wordemb' was deprecated, redirecting to 'speechbrain.integrations.huggingface.wordemb'. Please update your script.
+  lambda m: [m.__file__] if hasattr(m, "__file__") else [],
+/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py:264: UserWarning: Module 'speechbrain.lobes.models.huggingface_transformers' was deprecated, redirecting to 'speechbrain.integrations.huggingface'. Please update your script.
+  lambda m: [m.__file__] if hasattr(m, "__file__") else [],
+2026-05-11 22:00:09.077 Examining the path of speechbrain.lobes.models.spacy raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 12, in <module>
+    import flair
+ModuleNotFoundError: No module named 'flair'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/__init__.py", line 3, in <module>
+    from .flair_embeddings import *  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 16, in <module>
+    raise ImportError(
+ImportError: Failed to import flair: No module named 'flair'
+Please install flair e.g. using `pip install flair`.
+For more details, see https://github.com/flairNLP/flair
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 264, in <lambda>
+    lambda m: [m.__file__] if hasattr(m, "__file__") else [],
+                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.nlp, loaded=False) failed
+2026-05-11 22:00:09.081 Examining the path of speechbrain.lobes.models.spacy raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 12, in <module>
+    import flair
+ModuleNotFoundError: No module named 'flair'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/__init__.py", line 3, in <module>
+    from .flair_embeddings import *  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 16, in <module>
+    raise ImportError(
+ImportError: Failed to import flair: No module named 'flair'
+Please install flair e.g. using `pip install flair`.
+For more details, see https://github.com/flairNLP/flair
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 285, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.nlp, loaded=False) failed
+2026-05-11 22:00:09.083 Examining the path of speechbrain.lobes.models.flair raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 12, in <module>
+    import flair
+ModuleNotFoundError: No module named 'flair'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/__init__.py", line 3, in <module>
+    from .flair_embeddings import *  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 16, in <module>
+    raise ImportError(
+ImportError: Failed to import flair: No module named 'flair'
+Please install flair e.g. using `pip install flair`.
+For more details, see https://github.com/flairNLP/flair
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 264, in <lambda>
+    lambda m: [m.__file__] if hasattr(m, "__file__") else [],
+                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.nlp, loaded=False) failed
+2026-05-11 22:00:09.085 Examining the path of speechbrain.lobes.models.flair raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 12, in <module>
+    import flair
+ModuleNotFoundError: No module named 'flair'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/__init__.py", line 3, in <module>
+    from .flair_embeddings import *  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 16, in <module>
+    raise ImportError(
+ImportError: Failed to import flair: No module named 'flair'
+Please install flair e.g. using `pip install flair`.
+For more details, see https://github.com/flairNLP/flair
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 285, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.nlp, loaded=False) failed
+INFO:speechbrain.integrations.numba.transducer_loss:Numba verbose is deactivated. To enable it, set NUMBA_VERBOSE to 1.
+/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py:264: UserWarning: Module 'speechbrain.nnet.loss.transducer_loss' was deprecated, redirecting to 'speechbrain.integrations.numba.transducer_loss'. Please update your script. This module depends on the optional 'numba' package. If you encounter an ImportError here, please install numba, for example with: pip install numba
+  lambda m: [m.__file__] if hasattr(m, "__file__") else [],
+/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py:285: UserWarning: Torchaudio's I/O functions now support par-call bakcend dispatch. Importing backend implementation directly is no longer guaranteed to work. Please use `backend` keyword with load/save/info function, instead of calling the udnerlying implementation directly.
+  if hasattr(m, "__path__")
+2026-05-11 22:00:15.935 Examining the path of speechbrain.k2_integration raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/k2_fsa/__init__.py", line 12, in <module>
+    import k2  # noqa
+    ^^^^^^^^^
+ModuleNotFoundError: No module named 'k2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/k2_fsa/__init__.py", line 16, in <module>
+    raise ImportError(MSG) from e
+ImportError: Please install k2 to use k2
+Checkout: https://k2-fsa.github.io/k2/installation/from_wheels.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 264, in <lambda>
+    lambda m: [m.__file__] if hasattr(m, "__file__") else [],
+                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.k2_fsa, loaded=False) failed
+2026-05-11 22:00:15.937 Examining the path of speechbrain.k2_integration raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/k2_fsa/__init__.py", line 12, in <module>
+    import k2  # noqa
+    ^^^^^^^^^
+ModuleNotFoundError: No module named 'k2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/k2_fsa/__init__.py", line 16, in <module>
+    raise ImportError(MSG) from e
+ImportError: Please install k2 to use k2
+Checkout: https://k2-fsa.github.io/k2/installation/from_wheels.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 285, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.k2_fsa, loaded=False) failed
+2026-05-11 22:00:15.939 Examining the path of speechbrain.lobes.models.spacy raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 12, in <module>
+    import flair
+ModuleNotFoundError: No module named 'flair'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/__init__.py", line 3, in <module>
+    from .flair_embeddings import *  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 16, in <module>
+    raise ImportError(
+ImportError: Failed to import flair: No module named 'flair'
+Please install flair e.g. using `pip install flair`.
+For more details, see https://github.com/flairNLP/flair
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 264, in <lambda>
+    lambda m: [m.__file__] if hasattr(m, "__file__") else [],
+                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.nlp, loaded=False) failed
+2026-05-11 22:00:15.941 Examining the path of speechbrain.lobes.models.spacy raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 12, in <module>
+    import flair
+ModuleNotFoundError: No module named 'flair'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/__init__.py", line 3, in <module>
+    from .flair_embeddings import *  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 16, in <module>
+    raise ImportError(
+ImportError: Failed to import flair: No module named 'flair'
+Please install flair e.g. using `pip install flair`.
+For more details, see https://github.com/flairNLP/flair
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 285, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.nlp, loaded=False) failed
+2026-05-11 22:00:15.943 Examining the path of speechbrain.lobes.models.flair raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 12, in <module>
+    import flair
+ModuleNotFoundError: No module named 'flair'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/__init__.py", line 3, in <module>
+    from .flair_embeddings import *  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 16, in <module>
+    raise ImportError(
+ImportError: Failed to import flair: No module named 'flair'
+Please install flair e.g. using `pip install flair`.
+For more details, see https://github.com/flairNLP/flair
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 264, in <lambda>
+    lambda m: [m.__file__] if hasattr(m, "__file__") else [],
+                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.nlp, loaded=False) failed
+2026-05-11 22:00:15.944 Examining the path of speechbrain.lobes.models.flair raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 12, in <module>
+    import flair
+ModuleNotFoundError: No module named 'flair'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/__init__.py", line 3, in <module>
+    from .flair_embeddings import *  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 16, in <module>
+    raise ImportError(
+ImportError: Failed to import flair: No module named 'flair'
+Please install flair e.g. using `pip install flair`.
+For more details, see https://github.com/flairNLP/flair
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 285, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.nlp, loaded=False) failed
+/usr/local/lib/python3.12/dist-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1808.)
+  std = sequences.std(dim=-1, correction=1)
+/content/streamlit_app.py:343: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  cmap = plt.cm.get_cmap("tab20", max(len(labels), 1))
+2026-05-11 22:01:33.701 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-05-11 22:01:59.864 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+/content/streamlit_app.py:509: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _sr = librosa.load(str(raw_path), sr=16000, mono=True)
+/usr/local/lib/python3.12/dist-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+/content/streamlit_app.py:509: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _sr = librosa.load(str(raw_path), sr=16000, mono=True)
+/usr/local/lib/python3.12/dist-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+/content/streamlit_app.py:509: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _sr = librosa.load(str(raw_path), sr=16000, mono=True)
+/usr/local/lib/python3.12/dist-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+/content/streamlit_app.py:509: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _sr = librosa.load(str(raw_path), sr=16000, mono=True)
+/usr/local/lib/python3.12/dist-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+/content/streamlit_app.py:509: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _sr = librosa.load(str(raw_path), sr=16000, mono=True)
+/usr/local/lib/python3.12/dist-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+/content/streamlit_app.py:509: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _sr = librosa.load(str(raw_path), sr=16000, mono=True)
+/usr/local/lib/python3.12/dist-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+/content/streamlit_app.py:343: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  cmap = plt.cm.get_cmap("tab20", max(len(labels), 1))
+2026-05-11 22:03:22.050 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-05-11 22:03:28.370 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-05-11 22:03:28.438 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-05-11 22:03:28.505 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-05-11 22:03:29.267 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py:285: UserWarning: Torchaudio's I/O functions now support par-call bakcend dispatch. Importing backend implementation directly is no longer guaranteed to work. Please use `backend` keyword with load/save/info function, instead of calling the udnerlying implementation directly.
+  if hasattr(m, "__path__")
+2026-05-11 22:04:03.601 Examining the path of speechbrain.k2_integration raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/k2_fsa/__init__.py", line 12, in <module>
+    import k2  # noqa
+    ^^^^^^^^^
+ModuleNotFoundError: No module named 'k2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/k2_fsa/__init__.py", line 16, in <module>
+    raise ImportError(MSG) from e
+ImportError: Please install k2 to use k2
+Checkout: https://k2-fsa.github.io/k2/installation/from_wheels.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 264, in <lambda>
+    lambda m: [m.__file__] if hasattr(m, "__file__") else [],
+                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.k2_fsa, loaded=False) failed
+2026-05-11 22:04:03.610 Examining the path of speechbrain.k2_integration raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/k2_fsa/__init__.py", line 12, in <module>
+    import k2  # noqa
+    ^^^^^^^^^
+ModuleNotFoundError: No module named 'k2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/k2_fsa/__init__.py", line 16, in <module>
+    raise ImportError(MSG) from e
+ImportError: Please install k2 to use k2
+Checkout: https://k2-fsa.github.io/k2/installation/from_wheels.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 285, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.k2_fsa, loaded=False) failed
+2026-05-11 22:04:03.620 Examining the path of speechbrain.lobes.models.spacy raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 12, in <module>
+    import flair
+ModuleNotFoundError: No module named 'flair'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/__init__.py", line 3, in <module>
+    from .flair_embeddings import *  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 16, in <module>
+    raise ImportError(
+ImportError: Failed to import flair: No module named 'flair'
+Please install flair e.g. using `pip install flair`.
+For more details, see https://github.com/flairNLP/flair
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 264, in <lambda>
+    lambda m: [m.__file__] if hasattr(m, "__file__") else [],
+                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.nlp, loaded=False) failed
+2026-05-11 22:04:03.683 Examining the path of speechbrain.lobes.models.spacy raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 12, in <module>
+    import flair
+ModuleNotFoundError: No module named 'flair'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/__init__.py", line 3, in <module>
+    from .flair_embeddings import *  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 16, in <module>
+    raise ImportError(
+ImportError: Failed to import flair: No module named 'flair'
+Please install flair e.g. using `pip install flair`.
+For more details, see https://github.com/flairNLP/flair
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 285, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.nlp, loaded=False) failed
+2026-05-11 22:04:03.691 Examining the path of speechbrain.lobes.models.flair raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 12, in <module>
+    import flair
+ModuleNotFoundError: No module named 'flair'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/__init__.py", line 3, in <module>
+    from .flair_embeddings import *  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 16, in <module>
+    raise ImportError(
+ImportError: Failed to import flair: No module named 'flair'
+Please install flair e.g. using `pip install flair`.
+For more details, see https://github.com/flairNLP/flair
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 264, in <lambda>
+    lambda m: [m.__file__] if hasattr(m, "__file__") else [],
+                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.nlp, loaded=False) failed
+2026-05-11 22:04:03.705 Examining the path of speechbrain.lobes.models.flair raised:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 12, in <module>
+    import flair
+ModuleNotFoundError: No module named 'flair'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 97, in ensure_module
+    self.lazy_module = importlib.import_module(self.target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/__init__.py", line 3, in <module>
+    from .flair_embeddings import *  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/integrations/nlp/flair_embeddings.py", line 16, in <module>
+    raise ImportError(
+ImportError: Failed to import flair: No module named 'flair'
+Please install flair e.g. using `pip install flair`.
+For more details, see https://github.com/flairNLP/flair
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 298, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/streamlit/watcher/local_sources_watcher.py", line 285, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 112, in __getattr__
+    return getattr(self.ensure_module(1), attr)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 172, in ensure_module
+    module = super().ensure_module(stacklevel + 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/speechbrain/utils/importutils.py", line 103, in ensure_module
+    raise ImportError(f"Lazy import of {repr(self)} failed") from e
+ImportError: Lazy import of LazyModule(package=None, target=speechbrain.integrations.nlp, loaded=False) failed
+/content/streamlit_app.py:509: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _sr = librosa.load(str(raw_path), sr=16000, mono=True)
+/usr/local/lib/python3.12/dist-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+/content/streamlit_app.py:509: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _sr = librosa.load(str(raw_path), sr=16000, mono=True)
+/usr/local/lib/python3.12/dist-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+/content/streamlit_app.py:343: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  cmap = plt.cm.get_cmap("tab20", max(len(labels), 1))
+2026-05-11 22:05:06.833 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-05-11 22:05:11.854 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-05-11 22:05:11.939 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-05-11 22:05:11.998 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-05-11 22:05:13.130 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.

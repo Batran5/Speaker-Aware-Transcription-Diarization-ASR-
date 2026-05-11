@@ -1,0 +1,3 @@
+file,system,rtf,der_percent,speaker_label_wer_percent,speaker_label_cer_percent,num_speakers,num_segments
+sosnj,Baseline,0.0422,2.486,3.458,1.893,3,46
+sosnj,Fine-tuned,0.0426,2.906,4.323,2.501,3,46
